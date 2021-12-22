@@ -27,6 +27,29 @@
 
     <script type="text/babel">
 
+        const Banner = () => {
+                // to add a class, use className #JSX
+                //<div className="banner">
+                //<p>This paragraph has been added via ReactDOM</p>
+                //</div>
+                const title = "welcome to my website"
+                const subtitle = "this is a website for learning react"
+                const address = "www.netninja.dev"
+
+                return (
+                    <div className="banner">
+                    <h2>{title.toUpperCase()}</h2>
+                    <p>{subtitle}</p>
+                    <p>Today's date is: {new Date().toDateString()}</p>
+                    <p>Random number: {Math.random() * 100}</p>
+                    <a href={address}>Visit the Net Ninja site</a>
+                    </div>
+                )
+            }
+
+        // render the component to the DOM
+        ReactDOM.render(<Banner />, document.getElementById('banner'))
+
     </script>
     
 </body>
